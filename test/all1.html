@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Promise Test</title>
+  <script type="text/javascript" src="../lib/promise.js"></script>
+</head>
+<body>
+<h1>F12开控制台查看结果</h1>
+<script type="text/javascript">
+  var a = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 1000, 'a');
+  });
+
+  var b = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 2000, 'b');
+  });
+
+  var c = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 3000, 'c');
+  });    
+
+  Promise.all([a, b, c]).then(function(data) {
+    console.log(data[0], data[1], data[2]);
+  });
+</script>
+</body>
+</html>

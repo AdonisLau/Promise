@@ -1,0 +1,26 @@
+{
+  "name": "promise",
+  "version": "1.0.0",
+  "description": "Use Promise in IE",
+  "main": "./lib/promise.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdonisLau/Promise.git"
+  },
+  "keywords": [
+    "Promise",
+    "IE"
+  ],
+  "author": "Adonis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdonisLau/Promise/issues"
+  },
+  "homepage": "https://github.com/AdonisLau/Promise#readme"
+}
