@@ -229,7 +229,7 @@
 
 	      if (fired) {
 	        fn(result);
-	      } else {
+	      } else if (list) {
 	        list.push(fn);
 	      }
 	    },
@@ -259,6 +259,26 @@
 	}
 
 	module.exports = callback;
+
+	new Promise(function(resolve, reject) {
+	  setTimeout(function() {
+	    resolve(10)
+	  }, 2000);
+	})
+	.then(function(a) {
+	  return new Promise(function(resolve, reject) {
+	    console.log('a');
+	    resolve('1');
+	  }, 2000);
+	})
+	.then(function() {
+	  console.log('b');
+	  return 20;
+	})
+	.then(function(d) {
+	  console.log('c');
+	  alert(d);
+	})
 
 /***/ },
 /* 3 */

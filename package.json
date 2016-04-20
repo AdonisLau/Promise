@@ -2,7 +2,7 @@
   "name": "promise",
   "version": "1.0.0",
   "description": "Use Promise in IE",
-  "main": "./lib/promise.js",
+  "main": "./promise.js",
   "directories": {
     "test": "test"
   },
